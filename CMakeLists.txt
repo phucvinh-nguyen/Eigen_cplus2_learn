@@ -27,9 +27,11 @@ target_link_libraries(vector ${catkin_LIBRARIES})
 target_include_directories(vector PRIVATE )
 
 # Add the executable
-add_executable(inheritance 
-                          #  inheritance/GraduateStudent.cpp
-                           inheritance/Student/main.cpp)
+add_executable(inheritance inheritance/Student/main.cpp)
 target_link_libraries(inheritance ${catkin_LIBRARIES})
 target_include_directories(inheritance PRIVATE )
 
+# Add the executable
+add_executable(kalman KalmanFilter/KalmanFilter.cpp)
+target_link_libraries(kalman ${catkin_LIBRARIES})
+target_include_directories(kalman PRIVATE )
